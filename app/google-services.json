@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "766831801300",
+    "project_id": "uottahack-851fb",
+    "storage_bucket": "uottahack-851fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766831801300:android:4ea24c80ab9e401c899c41",
+        "android_client_info": {
+          "package_name": "com.example.hackathonapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766831801300-3usffbrvvg1oomef6fljt16in97smj0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0Nz1b9iq4Yr0Bzd57jxgq2XWX50uoWow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766831801300-3usffbrvvg1oomef6fljt16in97smj0o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
