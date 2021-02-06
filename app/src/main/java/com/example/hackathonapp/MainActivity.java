@@ -1,8 +1,10 @@
 package com.example.hackathonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -21,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "EmailPassword";
 
-
+    private Button btnProductivity;
+    private Button btnPhysicalWellness;
+    private Button btnMentalWellness;
     //Button btnSignup;
 
 
@@ -30,70 +34,54 @@ public class MainActivity extends AppCompatActivity {
     // [END declare_auth]
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-    }
-
-
-
-        // Initialize Firebase Auth
-        /*mAuth = FirebaseAuth.getInstance();
-        // End Initialize Firebase Auth
-
-
-        //btnSignup = findViewById(R.id.btnSignup);
-
-        //btnSignup.setOnClickListener(new View.OnClickListener() {
-
-        //}
-        Button btnSignup = (Button) findViewById(R.id.btnSignup);
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+        btnProductivity = (Button) findViewById(R.id.btnProductivity);
+        btnProductivity.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                // Do something in response to button click
-                Intent intent = new Intent(MainActivity.this, StartActivity.class);
-                startActivity(intent);
-
+                openProductivity();
             }
         });
+
+        btnPhysicalWellness = (Button) findViewById(R.id.btnPhysicalWellness);
+        btnPhysicalWellness.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openPhysicalWellness();
+            }
+        });
+
+        btnMentalWellness = (Button) findViewById(R.id.btnMentalWellness);
+        btnMentalWellness.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openMentalWellness();
+            }
+        });
+
+
+    }
+
+    public void openProductivity(){
+        Intent intent = new Intent(this, Productivity.class);
+        startActivity(intent);
+    }
+
+    public void openPhysicalWellness(){
+        Intent intent = new Intent(this, PhysicalWellness.class);
+        startActivity(intent);
     }
 
 
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
-
+    public void openMentalWellness(){
+        Intent intent = new Intent(this, MentalWellness.class);
+        startActivity(intent);
     }
 
-
-
-    public void getUserProfile() {
-        // [START get_user_profile]
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            // Name, email address, and profile photo Url
-            String name = user.getDisplayName();
-            String email = user.getEmail();
-            Uri photoUrl = user.getPhotoUrl();
-
-            // Check if user's email is verified
-            boolean emailVerified = user.isEmailVerified();
-
-            // The user's ID, unique to the Firebase project. Do NOT use this value to
-            // authenticate with your backend server, if you have one. Use
-            // FirebaseUser.getIdToken() instead.
-            String uid = user.getUid();
-        }
-        // [END get_user_profile]
-    }*/
-
-
-
-
+        
 }
