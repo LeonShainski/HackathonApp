@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "EmailPassword";
 
 
-    Button btnSignup;
+    //Button btnSignup;
 
 
     // [START declare_auth]
@@ -42,12 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        /*mAuth = FirebaseAuth.getInstance();
         // End Initialize Firebase Auth
 
-        //Below is for the name button
-        TextView txtName = (TextView) findViewById(R.id.txtName);
-        txtName.setText("Hey, Big man!");
 
         //btnSignup = findViewById(R.id.btnSignup);
 
@@ -94,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
             String uid = user.getUid();
         }
         // [END get_user_profile]
-    }
+    }*/
 
 
 
