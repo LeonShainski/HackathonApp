@@ -19,7 +19,7 @@
         android:layout_marginRight="2dp"
         android:layout_marginBottom="15dp"
         android:backgroundTint="#00000000"
-        app:layout_constraintBottom_toTopOf="@+id/btnActivity"
+        app:layout_constraintBottom_toTopOf="@+id/btnPhysicalWellness"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent" />
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnActivity"
+        android:id="@+id/btnPhysicalWellness"
         android:layout_width="392dp"
         android:layout_height="160dp"
         android:layout_marginStart="2dp"
@@ -46,13 +46,13 @@
         android:layout_marginRight="2dp"
         android:layout_marginBottom="15dp"
         android:backgroundTint="#00000000"
-        app:layout_constraintBottom_toTopOf="@+id/btnSpiritual"
+        app:layout_constraintBottom_toTopOf="@+id/btnMentalWellness"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnSpiritual"
+        android:id="@+id/btnMentalWellness"
         android:layout_width="392dp"
         android:layout_height="160dp"
         android:layout_marginStart="2dp"
@@ -83,79 +83,79 @@
         android:id="@+id/txtProductivityTitle"
         android:layout_width="149dp"
         android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
         android:text="Productivity"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnProductivity" />
 
     <TextView
-        android:id="@+id/txtActivityTitle"
-        android:layout_width="149dp"
+        android:id="@+id/txtPhysicalWellness"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
-        android:text="Activity"
+        android:text="Physical Wellness"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnActivity" />
+        app:layout_constraintTop_toTopOf="@+id/btnPhysicalWellness" />
 
     <TextView
-        android:id="@+id/txtSpiritual"
-        android:layout_width="149dp"
+        android:id="@+id/txtMentalWellness"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="16dp"
-        android:text="Spiritual"
+        android:text="Mental Wellness"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnSpiritual" />
+        app:layout_constraintTop_toTopOf="@+id/btnMentalWellness" />
 
     <TextView
         android:id="@+id/txtProductivityView"
-        android:layout_width="147dp"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:text="View Tasks >"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnProductivity" />
 
     <TextView
         android:id="@+id/txtActivityView"
-        android:layout_width="147dp"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:text="View Tasks >"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnActivity" />
+        app:layout_constraintTop_toTopOf="@+id/btnPhysicalWellness" />
 
     <TextView
         android:id="@+id/txtSpiritualView"
-        android:layout_width="147dp"
+        android:layout_width="wrap_content"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:text="View Tasks >"
         android:textColor="#FFFFFF"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnSpiritual" />
+        app:layout_constraintTop_toTopOf="@+id/btnMentalWellness" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
