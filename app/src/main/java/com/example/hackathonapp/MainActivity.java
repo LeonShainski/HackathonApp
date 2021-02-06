@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "EmailPassword";
 
+
     Button btnSignup;
+
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Below is for the name button
         TextView txtName = (TextView) findViewById(R.id.txtName);
-        txtName.setText("Big man");
+        txtName.setText("Hey, Big man!");
 
         //btnSignup = findViewById(R.id.btnSignup);
 
