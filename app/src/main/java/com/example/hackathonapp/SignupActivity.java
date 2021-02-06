@@ -1,6 +1,7 @@
 package com.example.hackathonapp;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,5 +16,9 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         //Firebase initialization
         mAuth = FirebaseAuth.getInstance();
+
+        //Setting the title text
+        TextView txtTopTitle = (TextView) findViewById(R.id.txtTopTitle);
+        txtTopTitle.setText("Sign Up Below to Use Our Services");
     }
 }
