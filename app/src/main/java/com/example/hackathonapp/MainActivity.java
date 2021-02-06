@@ -1,16 +1,40 @@
 package com.example.hackathonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "EmailPassword";
+
     private Button btnProductivity;
     private Button btnPhysicalWellness;
     private Button btnMentalWellness;
+    //Button btnSignup;
+
+
+    // [START declare_auth]
+    private FirebaseAuth mAuth;
+    // [END declare_auth]
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
     public void openProductivity(){
@@ -52,8 +77,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     public void openMentalWellness(){
         Intent intent = new Intent(this, MentalWellness.class);
         startActivity(intent);
     }
+
+        
 }
