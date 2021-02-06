@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        name = findViewById(R.id.txtEnterNameBox);
-        add = findViewById(R.id.btnAddName);
+        //name = findViewById(R.id.txtEnterNameBox);
+        //add = findViewById(R.id.btnAddName);
 
         btnProductivity = (Button) findViewById(R.id.btnProductivity);
         btnProductivity.setOnClickListener(new View.OnClickListener() {
