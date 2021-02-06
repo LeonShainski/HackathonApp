@@ -1,5 +1,6 @@
 package com.example.hackathonapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -62,6 +63,8 @@ public class SignupActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
 
                     Toast.makeText(SignupActivity.this, "Success! You're in!", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(SignupActivity.this, UserInfoRegistration.class));
+                    finish();
                 } else {
                     Toast.makeText(SignupActivity.this, "Registration failed. You're account may already exist! Try logging in :)", Toast.LENGTH_SHORT).show();
                 }
