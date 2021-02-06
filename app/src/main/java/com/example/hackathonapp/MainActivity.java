@@ -35,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+    }
+
+
+
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         // End Initialize Firebase Auth
@@ -89,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         }
         // [END get_user_profile]
     }
+
 
 
 
