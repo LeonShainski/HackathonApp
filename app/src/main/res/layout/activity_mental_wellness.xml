@@ -6,4 +6,152 @@
     android:layout_height="match_parent"
     tools:context=".MentalWellness">
 
+    <TextView
+        android:id="@+id/txtMentalWellnessTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Mental Wellness"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chkMental1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:password="false"
+        android:text="Meditate"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textIsSelectable="false"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMentalWellnessTab" />
+
+    <CheckBox
+        android:id="@+id/chkMental2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Talk to a friend"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkMental1" />
+
+    <CheckBox
+        android:id="@+id/chkMental3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Get some fresh air"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkMental2" />
+
+    <CheckBox
+        android:id="@+id/chkMental4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Coffee Break"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkMental3" />
+
+    <TextView
+        android:id="@+id/txtMentalBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkMental1"
+        app:layout_constraintEnd_toEndOf="@+id/chkMental1"
+        app:layout_constraintTop_toTopOf="@+id/chkMental1" />
+
+    <TextView
+        android:id="@+id/txtMentalBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkMental2"
+        app:layout_constraintEnd_toEndOf="@+id/chkMental2"
+        app:layout_constraintTop_toTopOf="@+id/chkMental2" />
+
+    <TextView
+        android:id="@+id/txtMentalBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkMental3"
+        app:layout_constraintEnd_toEndOf="@+id/chkMental3"
+        app:layout_constraintTop_toTopOf="@+id/chkMental3" />
+
+    <TextView
+        android:id="@+id/txtMentalBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkMental4"
+        app:layout_constraintEnd_toEndOf="@+id/chkMental4"
+        app:layout_constraintTop_toTopOf="@+id/chkMental4" />
+
+    <Button
+        android:id="@+id/btnMentalFinished"
+        android:layout_width="162dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:text="Finished"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
