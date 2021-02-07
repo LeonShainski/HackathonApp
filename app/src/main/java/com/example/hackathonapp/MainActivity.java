@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar mentalProgress;
     private ProgressBar physicalProgress;
 
+    private ProgressBar personalLevel;
+    private int prgPersonLevel;
+
     private static int prgProductivity;
     private static int prgMentalWellness;
     private static int prgPhysicalWellness;
@@ -70,26 +73,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnPhysicalWellness = (Button) findViewById(R.id.btnPhysicalWellness);
-        btnPhysicalWellness.setOnClickListener(new View.OnClickListener(){
+        btnPhysicalWellness.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 openPhysicalWellness();
             }
         });
 
         btnMentalWellness = (Button) findViewById(R.id.btnMentalWellness);
-        btnMentalWellness.setOnClickListener(new View.OnClickListener(){
+        btnMentalWellness.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 openMentalWellness();
             }
         });
-
-
-       productivityProgress = (ProgressBar)findViewById(R.id.prgProductivityProgress);
-        Intent mIntent = getIntent();
-        prgProductivity = mIntent.getIntExtra("productivityPercent" , prgProductivity );
-        productivityProgress.setProgress(prgProductivity);
 
         //FirebaseDatabase database = FirebaseDatabase.getInstance();
         //DatabaseReference myRef = database.getReference("User");
@@ -113,36 +110,46 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase.getInstance().getReference().child("userInfo").child("MultipleValues").updateChildren(map);*/
 
-        physicalProgress = (ProgressBar)findViewById(R.id.prgPhysicalProgress);
+
+
+        productivityProgress = (ProgressBar) findViewById(R.id.prgProductivityProgress);
+        Intent mIntent = getIntent();
+        prgProductivity = mIntent.getIntExtra("productivityPercent", prgProductivity);
+        productivityProgress.setProgress(prgProductivity);
+
+        physicalProgress = (ProgressBar) findViewById(R.id.prgPhysicalProgress);
         Intent mIntent3 = getIntent();
         prgPhysicalWellness = mIntent3.getIntExtra("physicalWellnessPercent", prgPhysicalWellness);
         physicalProgress.setProgress(prgPhysicalWellness);
 
-        mentalProgress = (ProgressBar)findViewById(R.id.prgMentalProgress);
+        mentalProgress = (ProgressBar) findViewById(R.id.prgMentalProgress);
         Intent mIntent2 = getIntent();
         prgMentalWellness = mIntent2.getIntExtra("mentalWellnessPercent", prgMentalWellness);
         mentalProgress.setProgress(prgMentalWellness);
+
+        personalLevel = (ProgressBar)findViewById(R.id.personLevel);
+        prgPersonLevel = ( prgPhysicalWellness + prgMentalWellness + prgProductivity ) / 3;
+        personalLevel.setProgress(prgPersonLevel);
     }
 
-    public void openProductivity(){
+    public void openProductivity() {
         Intent intent = new Intent(this, Productivity.class);
         startActivity(intent);
     }
 
-    public void openPhysicalWellness(){
+    public void openPhysicalWellness() {
         Intent intent = new Intent(this, PhysicalWellness.class);
         startActivity(intent);
     }
 
 
-    public void openMentalWellness(){
+    public void openMentalWellness() {
         Intent intent = new Intent(this, MentalWellness.class);
         startActivity(intent);
     }
 
 
-
     //FirebaseDatabase.getInstance().getReference().child("ProgrammingKnowledge").child("Android").setValue("abcd");
 
-        
+
 }
