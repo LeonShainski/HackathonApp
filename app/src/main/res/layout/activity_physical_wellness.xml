@@ -6,4 +6,151 @@
     android:layout_height="match_parent"
     tools:context=".PhysicalWellness">
 
+    <TextView
+        android:id="@+id/txtPhysicalWellnessTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Physical Wellness"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/chkPhysical1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:password="false"
+        android:text="Go for a walk"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textIsSelectable="false"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhysicalWellnessTab" />
+
+    <CheckBox
+        android:id="@+id/chkPhysical2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Take a shower"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkPhysical1" />
+
+    <CheckBox
+        android:id="@+id/chkPhysical3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Drink some water"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkPhysical2" />
+
+    <CheckBox
+        android:id="@+id/chkPhysical4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:text="Stretch your body"
+        android:textColor="#000000"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkPhysical3" />
+
+    <TextView
+        android:id="@+id/txtPhysicalBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkPhysical1"
+        app:layout_constraintEnd_toEndOf="@+id/chkPhysical1"
+        app:layout_constraintTop_toTopOf="@+id/chkPhysical1" />
+
+    <TextView
+        android:id="@+id/txtPhysicalBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkPhysical2"
+        app:layout_constraintEnd_toEndOf="@+id/chkPhysical2"
+        app:layout_constraintTop_toTopOf="@+id/chkPhysical2" />
+
+    <TextView
+        android:id="@+id/txtPhysicalBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkPhysical3"
+        app:layout_constraintEnd_toEndOf="@+id/chkPhysical3"
+        app:layout_constraintTop_toTopOf="@+id/chkPhysical3" />
+
+    <TextView
+        android:id="@+id/txtPhysicalBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="+25"
+        android:textColor="#4CAF50"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkPhysical4"
+        app:layout_constraintEnd_toEndOf="@+id/chkPhysical4"
+        app:layout_constraintTop_toTopOf="@+id/chkPhysical4" />
+
+    <Button
+        android:id="@+id/btnPhysicalFinished"
+        android:layout_width="162dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:text="Finished"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

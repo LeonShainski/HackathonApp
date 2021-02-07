@@ -1,6 +1,8 @@
 package com.example.hackathonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,24 +26,33 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "EmailPassword";
+
+    private ProgressBar productivityProgress;
+    private ProgressBar mentalProgress;
+    private ProgressBar physicalProgress;
+
+    private static int prgProductivity;
+    private static int prgMentalWellness;
+    private static int prgPhysicalWellness;
 
     private Button btnProductivity;
     private Button btnPhysicalWellness;
     private Button btnMentalWellness;
     private Button btnEnterTesting;
+
     private EditText name;
     private Button add;
+
     //Button btnSignup;
 
 
     // [START declare_auth]
     //private FirebaseAuth mAuth;
     // [END declare_auth]
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +96,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+       productivityProgress = (ProgressBar)findViewById(R.id.prgProductivityProgress);
+        Intent mIntent = getIntent();
+        prgProductivity = mIntent.getIntExtra("productivityPercent" , prgProductivity );
+        productivityProgress.setProgress(prgProductivity);
+
         //FirebaseDatabase database = FirebaseDatabase.getInstance();
         //DatabaseReference myRef = database.getReference("User");
         //myRef.child("bruv").setValue("Hello, World!");
@@ -106,6 +124,15 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseDatabase.getInstance().getReference().child("userInfo").child("MultipleValues").updateChildren(map);*/
 
+        physicalProgress = (ProgressBar)findViewById(R.id.prgPhysicalProgress);
+        Intent mIntent3 = getIntent();
+        prgPhysicalWellness = mIntent3.getIntExtra("physicalWellnessPercent", prgPhysicalWellness);
+        physicalProgress.setProgress(prgPhysicalWellness);
+
+        mentalProgress = (ProgressBar)findViewById(R.id.prgMentalProgress);
+        Intent mIntent2 = getIntent();
+        prgMentalWellness = mIntent2.getIntExtra("mentalWellnessPercent", prgMentalWellness);
+        mentalProgress.setProgress(prgMentalWellness);
     }
 
     public void openProductivity(){
@@ -123,9 +150,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MentalWellness.class);
         startActivity(intent);
     }
-
-
-
 
 
 
