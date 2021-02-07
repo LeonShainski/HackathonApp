@@ -10,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
@@ -56,9 +58,16 @@ public class UserInfoRegistration extends AppCompatActivity {
                     map.put("Name", txt_txtNameBoxUserReg);
                     map.put("Age", txt_txtAgeBoxUserReg);
                     map.put("Occupation", occupation);*/
-                    String tempChild="testing";
+                    //String tempChild="testing";
+
+
+                    //Declaring a new user and assigning it the proper parameters
                     User user = new User (txt_txtNameBoxUserReg, txt_txtAgeBoxUserReg, occupation);
-                    FirebaseDatabase.getInstance().getReference().child("Info").push().setValue(user);
+                    //Getting the current user from firebase, and extracting their uid
+                    FirebaseUser userInfo = FirebaseAuth.getInstance().getCurrentUser();
+                    String uid = userInfo.getUid();
+                    //Making a new entry under userInfo, with the id being the user's uid, and the entry being of type user.class
+                    FirebaseDatabase.getInstance().getReference().child("userInfo").child(uid).setValue(user);
                     startActivity(new Intent(UserInfoRegistration.this, MainActivity.class));
                     finish();
                 }
