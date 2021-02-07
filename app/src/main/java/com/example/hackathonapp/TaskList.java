@@ -76,8 +76,8 @@ public class TaskList extends AppCompatActivity {
     }
 
     private void setVisibility(String finalName) {
-        PhysicalWellness.chkPhysical5.setVisibility(View.VISIBLE);
-        textbox5PW.setVisibility(View.VISIBLE);
+        //PhysicalWellness.chkPhysical5.setVisibility(View.VISIBLE);
+        //textbox5PW.setVisibility(View.VISIBLE);
         //checkbox5PW.setText("Some text");
     }
 
