@@ -254,45 +254,36 @@
         app:layout_constraintStart_toStartOf="@+id/personLevel"
         app:layout_constraintTop_toTopOf="@+id/personLevel" />
 
-    <Button
-        android:id="@+id/btnAddTasksMain3"
-        android:layout_width="123dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="4dp"
-        android:text="New Task"
-        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnSeeTasksMain"
         android:layout_width="123dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="36dp"
-        android:text="Add Task"
-        app:backgroundTint="#2596BE"
-        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
+        android:text="Task List"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddTasksMain"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFriendlyGreetingMain"
+        app:layout_constraintVertical_bias="0.36" />
 
     <Button
         android:id="@+id/btnAddTasksMain"
         android:layout_width="123dp"
         android:layout_height="37dp"
-        android:layout_marginBottom="4dp"
-        android:text="New Task"
-        app:backgroundTint="#2596BE"
+        android:layout_marginTop="44dp"
+        android:text="Add Task"
         app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFriendlyGreetingMain"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtFriendlyGreetingMain"
         android:layout_width="224dp"
-        android:layout_height="67dp"
+        android:layout_height="50dp"
         android:text="Good to see you! Check in below :)"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
