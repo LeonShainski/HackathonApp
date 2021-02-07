@@ -26,12 +26,12 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="175dp"
+        android:layout_width="42dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="User Name"
+        android:text="Hey, "
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -158,9 +158,6 @@
         app:layout_constraintTop_toTopOf="@+id/btnMentalWellness" />
 
 
-
-
-
     <ProgressBar
         android:id="@+id/prgProductivityProgress"
         style="@android:style/Widget.ProgressBar.Horizontal"
@@ -200,6 +197,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnMentalWellness"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btnMentalWellness" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -268,6 +266,18 @@
         app:layout_constraintEnd_toEndOf="@+id/personLevel"
         app:layout_constraintStart_toStartOf="@+id/personLevel"
         app:layout_constraintTop_toTopOf="@+id/personLevel" />
+
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
 
 
     <!--<EditText

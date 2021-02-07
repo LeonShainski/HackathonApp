@@ -1,5 +1,6 @@
 package com.example.hackathonapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -22,8 +23,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 
@@ -48,9 +52,13 @@ public class MainActivity extends AppCompatActivity {
     private Button btnPhysicalWellness;
     private Button btnMentalWellness;
     private Button btnEnterTesting;
+    private TextView txtUserName;
+    private String userName;
 
     private EditText name;
     private Button add;
+    private FirebaseAuth mAuth;
+    DatabaseReference databaseUsers;
 
 
     //Button btnSignup;
@@ -69,6 +77,49 @@ public class MainActivity extends AppCompatActivity {
         //name = findViewById(R.id.txtEnterNameBox);
         //add = findViewById(R.id.btnAddName);
 
+        FirebaseUser userInfo = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = userInfo.getUid();
+
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        databaseUsers = database.getReference("userInfo");
+        DatabaseReference username = databaseUsers.child(uid).child("name");
+
+        username.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //Getting the name based on the uid
+                userName = dataSnapshot.getValue().toString();
+                //Setting the name of the user in the main activity for a personal greeting
+                txtUserName.setText(userName + "!");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        /*ValueEventListener postListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Get Post object and use the values to update the UI
+                User post = dataSnapshot.getValue(User.class);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Getting Post failed, log a message
+                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
+            }
+        };*/
+
+
+
+        txtUserName = findViewById(R.id.txtUserName);
+
+
         btnProductivity = (Button) findViewById(R.id.btnProductivity);
 
         btnProductivity.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +128,16 @@ public class MainActivity extends AppCompatActivity {
                 openProductivity();
             }
         });
+
+
+        //btnEnterTesting = findViewById(R.id.btnEnterTesting);
+        /*btnEnterTesting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestingActivity.class));
+            }
+        });*/
+
 
 
         btnPhysicalWellness = (Button) findViewById(R.id.btnPhysicalWellness);
