@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnProductivity;
     private Button btnPhysicalWellness;
     private Button btnMentalWellness;
+    private Button btnEnterTesting;
     private EditText name;
     private Button add;
     //Button btnSignup;
@@ -50,12 +51,22 @@ public class MainActivity extends AppCompatActivity {
         //add = findViewById(R.id.btnAddName);
 
         btnProductivity = (Button) findViewById(R.id.btnProductivity);
+
         btnProductivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openProductivity();
             }
         });
+
+        btnEnterTesting = findViewById(R.id.btnEnterTesting);
+        btnEnterTesting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestingActivity.class));
+            }
+        });
+
 
         btnPhysicalWellness = (Button) findViewById(R.id.btnPhysicalWellness);
         btnPhysicalWellness.setOnClickListener(new View.OnClickListener(){

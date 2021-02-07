@@ -52,11 +52,13 @@ public class UserInfoRegistration extends AppCompatActivity {
                     } else  {
                         occupation = "Nothing";
                     }
-                    HashMap<String, Object> map = new HashMap<>();
+                    /*HashMap<String, Object> map = new HashMap<>();
                     map.put("Name", txt_txtNameBoxUserReg);
                     map.put("Age", txt_txtAgeBoxUserReg);
-                    map.put("Occupation", occupation);
-                    FirebaseDatabase.getInstance().getReference().child("userInfo").push().updateChildren(map);
+                    map.put("Occupation", occupation);*/
+                    String tempChild="testing";
+                    User user = new User (txt_txtNameBoxUserReg, txt_txtAgeBoxUserReg, occupation);
+                    FirebaseDatabase.getInstance().getReference().child("Info").push().setValue(user);
                     startActivity(new Intent(UserInfoRegistration.this, MainActivity.class));
                     finish();
                 }
