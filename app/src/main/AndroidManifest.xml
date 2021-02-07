@@ -21,7 +21,7 @@
         <activity
             android:name=".Productivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
         <activity android:name=".StartActivity">
 
             <intent-filter>
@@ -31,8 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignupActivity"/>
-        <activity android:name=".MainActivity"/>
+
         <activity android:name=".LoginActivity"/>
     </application>
-
 </manifest>
