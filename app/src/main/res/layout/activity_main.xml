@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
-        android:id="@+id/progress_bar"
+        android:id="@+id/personLevel"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginTop="22dp"
@@ -77,7 +77,7 @@
         android:progressDrawable="@drawable/progress_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:progress="55" />
+        tools:progress="0" />
 
     <TextView
         android:id="@+id/txtProductivityTitle"
