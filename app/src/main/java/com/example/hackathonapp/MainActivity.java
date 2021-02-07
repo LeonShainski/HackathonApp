@@ -21,6 +21,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     private Button btnPhysicalWellness;
     private Button btnMentalWellness;
 
+    private EditText name;
+    private Button add;
 
     //Button btnSignup;
 
@@ -51,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //name = findViewById(R.id.txtEnterNameBox);
+        //add = findViewById(R.id.btnAddName);
 
         btnProductivity = (Button) findViewById(R.id.btnProductivity);
         btnProductivity.setOnClickListener(new View.OnClickListener() {
@@ -76,10 +85,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
        productivityProgress = (ProgressBar)findViewById(R.id.prgProductivityProgress);
         Intent mIntent = getIntent();
         prgProductivity = mIntent.getIntExtra("productivityPercent" , prgProductivity );
         productivityProgress.setProgress(prgProductivity);
+
+        //FirebaseDatabase database = FirebaseDatabase.getInstance();
+        //DatabaseReference myRef = database.getReference("User");
+        //myRef.child("bruv").setValue("Hello, World!");
+
+        /*add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String txt_name = name.getText().toString();
+                if (txt_name.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "No name entered!", Toast.LENGTH_SHORT).show();
+                } else {
+                    FirebaseDatabase.getInstance().getReference().child("userInfo").push().child("Name").setValue(txt_name);
+                }
+            }
+        });
+
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("Name", "Alex");
+        map.put("Email", "hotdogs4life@gmail.com");
+
+        FirebaseDatabase.getInstance().getReference().child("userInfo").child("MultipleValues").updateChildren(map);*/
 
         physicalProgress = (ProgressBar)findViewById(R.id.prgPhysicalProgress);
         Intent mIntent3 = getIntent();
@@ -108,6 +140,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+
+    //FirebaseDatabase.getInstance().getReference().child("ProgrammingKnowledge").child("Android").setValue("abcd");
 
         
 }

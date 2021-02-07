@@ -157,6 +157,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnMentalWellness" />
 
+
     <ProgressBar
         android:id="@+id/prgProductivityProgress"
         style="@android:style/Widget.ProgressBar.Horizontal"
@@ -196,6 +197,26 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnMentalWellness"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btnMentalWellness" />
+
+    <!--<EditText
+        android:id="@+id/txtEnterNameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="12dp" />
+
+    <Button
+        android:id="@+id/btnAddName"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Add"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnterNameBox"
+        tools:layout_editor_absoluteX="13dp" />-->
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
