@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnPhysicalWellness;
     private Button btnMentalWellness;
     private Button btnEnterTesting;
+    private Button btnAddTasksMain;
     private TextView txtUserName;
     private String userName;
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser userInfo = FirebaseAuth.getInstance().getCurrentUser();
         String uid = userInfo.getUid();
 
+        //userName = "Good to see you again";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         databaseUsers = database.getReference("userInfo");
@@ -91,7 +93,8 @@ public class MainActivity extends AppCompatActivity {
                 //Getting the name based on the uid
                 userName = dataSnapshot.getValue().toString();
                 //Setting the name of the user in the main activity for a personal greeting
-                txtUserName.setText(userName + "!");
+                txtUserName.setText(userName);
+
             }
 
             @Override
@@ -129,6 +132,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnAddTasksMain = findViewById(R.id.btnAddTasksMain);
+
+        btnAddTasksMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddTasks.class));
+            }
+        });
 
         //btnEnterTesting = findViewById(R.id.btnEnterTesting);
         /*btnEnterTesting.setOnClickListener(new View.OnClickListener() {

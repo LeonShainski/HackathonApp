@@ -23,12 +23,12 @@ public class StartActivity extends AppCompatActivity {
 
         register.setOnClickListener((v) -> {
             startActivity(new Intent(StartActivity.this, SignupActivity.class));
-            finish();
+
         });
 
         login.setOnClickListener((v) -> {
             startActivity(new Intent(StartActivity.this, LoginActivity.class));
-            finish();
+
         });
     }
 }

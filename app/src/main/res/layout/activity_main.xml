@@ -26,13 +26,14 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="42dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="34dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:text="Hey, "
-        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -269,15 +270,43 @@
 
     <EditText
         android:id="@+id/txtUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="118dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:background="@null"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.033" />
+
+    <Button
+        android:id="@+id/btnAddTasksMain"
+        android:layout_width="123dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="16dp"
+        android:text="Add Tasks"
+        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFriendlyGreetingMain"
+        android:layout_width="205dp"
+        android:layout_height="64dp"
+        android:text="Let me know how you're doing :)"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.003" />
 
 
     <!--<EditText
@@ -298,7 +327,6 @@
         android:text="Add"
         app:layout_constraintTop_toBottomOf="@+id/txtEnterNameBox"
         tools:layout_editor_absoluteX="13dp" />-->
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
