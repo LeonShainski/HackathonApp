@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HackathonApp">
-        <activity android:name=".UserInfoRegistration"></activity>
+        <activity android:name=".TestingActivity" />
+        <activity android:name=".UserInfoRegistration" />
         <activity
             android:name=".MentalWellness"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PhysicalWellness"
             android:parentActivityName=".MainActivity" />
