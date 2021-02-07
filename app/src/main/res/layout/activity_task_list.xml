@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TaskList">
+    tools:context=".TaskList"
+    android:background="@drawable/shooting_star">
 
     <TextView
         android:id="@+id/txtTaskListTitle"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:text="Task List"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/list_view"
