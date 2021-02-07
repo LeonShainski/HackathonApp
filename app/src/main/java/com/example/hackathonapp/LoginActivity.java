@@ -1,6 +1,11 @@
 package com.example.hackathonapp;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        createNotificationChannel();
 
         email = findViewById(R.id.txtEmailBoxLogin);
         password = findViewById(R.id.txtPasswordBoxLogin);
@@ -39,6 +45,21 @@ public class LoginActivity extends AppCompatActivity {
                 String txt_email = email.getText().toString();
                 String txt_password = password.getText().toString();
                 loginUser(txt_email, txt_password);
+
+                //Notification ting below
+                Intent intent = new Intent(LoginActivity.this,ReminderBroadcast.class);
+                PendingIntent pendingIntent = PendingIntent.getBroadcast(LoginActivity.this, 0, intent,0);
+
+                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
+                long timeAtButtonClick = System.currentTimeMillis();
+
+                //How long until the notification comes up
+                long tenSecondsInMillis = 1000 * 10;
+
+                alarmManager.set(AlarmManager.RTC_WAKEUP,
+                        timeAtButtonClick + tenSecondsInMillis,
+                        pendingIntent);
             }
         });
 
@@ -54,5 +75,19 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void createNotificationChannel(){
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            CharSequence name = "ReminderChannel";
+            String description = "Channel for Reminder";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("App_notification", name, importance);
+            channel.setDescription(description);
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HackathonApp">
-        <activity android:name=".AddTasks"></activity>
+        <activity android:name=".TaskList"></activity>
+        <activity android:name=".AddTasks" />
         <activity android:name=".TestingActivity" />
         <activity android:name=".UserInfoRegistration" />
         <activity
@@ -31,6 +32,7 @@
         </activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity" />
+        <receiver android:name=".ReminderBroadcast"/>
     </application>
 
 </manifest>

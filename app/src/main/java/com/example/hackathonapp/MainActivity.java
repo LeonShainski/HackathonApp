@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnMentalWellness;
     private Button btnEnterTesting;
     private Button btnAddTasksMain;
+    private Button btnSeeTasksMain;
     private TextView txtUserName;
     private String userName;
 
@@ -136,6 +137,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AddTasks.class));
+            }
+        });
+
+
+        btnSeeTasksMain = findViewById(R.id.btnSeeTasksMain);
+
+        btnSeeTasksMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TaskList.class));
             }
         });
 

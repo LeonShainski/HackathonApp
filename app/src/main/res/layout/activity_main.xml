@@ -24,19 +24,6 @@
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="34dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Hey, "
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnPhysicalWellness"
         android:layout_width="392dp"
@@ -267,6 +254,53 @@
         app:layout_constraintStart_toStartOf="@+id/personLevel"
         app:layout_constraintTop_toTopOf="@+id/personLevel" />
 
+    <Button
+        android:id="@+id/btnAddTasksMain3"
+        android:layout_width="123dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="4dp"
+        android:text="New Task"
+        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSeeTasksMain"
+        android:layout_width="123dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="36dp"
+        android:text="Add Task"
+        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddTasksMain"
+        android:layout_width="123dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="4dp"
+        android:text="New Task"
+        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFriendlyGreetingMain"
+        android:layout_width="224dp"
+        android:layout_height="67dp"
+        android:text="Good to see you! Check in below :)"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.006" />
+
     <EditText
         android:id="@+id/txtUserName"
         android:layout_width="118dp"
@@ -280,32 +314,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033" />
-
-    <Button
-        android:id="@+id/btnAddTasksMain"
-        android:layout_width="123dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="16dp"
-        android:text="Add Tasks"
-        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
-        android:id="@+id/txtFriendlyGreetingMain"
-        android:layout_width="205dp"
-        android:layout_height="64dp"
-        android:text="Let me know how you're doing :)"
+        android:id="@+id/textView3"
+        android:layout_width="34dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Hey, "
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <!--<EditText
