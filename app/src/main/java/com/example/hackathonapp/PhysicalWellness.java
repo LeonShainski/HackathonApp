@@ -30,6 +30,7 @@ public class PhysicalWellness extends AppCompatActivity {
     public static final String CHECK3_PW = "Checkbox3_PW";
     public static final String CHECK4_PW = "Checkbox4_PW";
     public static final String CHECK5_PW = "Checkbox4_PW";
+    public String finalName;
 
     private Boolean check1_PW;
     private Boolean check2_PW;
@@ -54,6 +55,8 @@ public class PhysicalWellness extends AppCompatActivity {
         //checkbox5PW.setText("Some text");
         textbox5PW.setVisibility(View.GONE);
 
+
+
         finishedBoxPW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +68,11 @@ public class PhysicalWellness extends AppCompatActivity {
         loadData();
         updateViews();
 
+        finalName = getIntent().getStringExtra("finalName");
+
+        if (finalName!=null) {
+            addNew(finalName);
+        }
 
     }
 
@@ -98,7 +106,7 @@ public class PhysicalWellness extends AppCompatActivity {
         checkbox2PW.setChecked(check2_PW);
         checkbox3PW.setChecked(check3_PW);
         checkbox4PW.setChecked(check4_PW);
-        checkbox4PW.setChecked(check5_PW);
+        checkbox5PW.setChecked(check5_PW);
     }
 
     public int loadPercentage(){
@@ -129,7 +137,7 @@ public class PhysicalWellness extends AppCompatActivity {
 
     public void addNew (String name) {
         checkbox5PW.setVisibility(View.VISIBLE);
-        checkbox5PW.setText("Some text");
+        checkbox5PW.setText(name);
         textbox5PW.setVisibility(View.VISIBLE);
     }
 }

@@ -2,6 +2,7 @@ package com.example.hackathonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -60,7 +61,18 @@ public class TaskList extends AppCompatActivity {
                         String finalCategory = sanitizeCategory(itemName);
                         Toast.makeText(TaskList.this, finalName + " has been added to the " + finalCategory + " task list!", Toast.LENGTH_SHORT).show();
                         //Toast.makeText(this, finalName, Toast.LENGTH_SHORT).show();
-                        setVisibility(finalName);
+                        //setVisibilityPhysical(finalName);
+                        if (finalCategory.toString().equals("Physical")) {
+                            setVisibilityPhysical(finalName);
+                        }
+                        if (finalCategory.toString().equals("Mental")) {
+                            setVisibilityMental(finalName);
+                        }
+                        if (finalCategory.toString().equals("Productivity")) {
+                            setVisibilityProductivity(finalName);
+                        }
+
+
 
                     }
                 });
@@ -75,7 +87,22 @@ public class TaskList extends AppCompatActivity {
         scoreRef.addListenerForSingleValueEvent(eventListener);
     }
 
-    private void setVisibility(String finalName) {
+    private void setVisibilityProductivity(String finalName) {
+        Intent intent = new Intent(getBaseContext(), Productivity.class);
+        intent.putExtra("finalName", finalName);
+        startActivity(intent);
+    }
+
+    private void setVisibilityMental(String finalName) {
+        Intent intent = new Intent(getBaseContext(), MentalWellness.class);
+        intent.putExtra("finalName", finalName);
+        startActivity(intent);
+    }
+
+    private void setVisibilityPhysical(String finalName) {
+        Intent intent = new Intent(getBaseContext(), PhysicalWellness.class);
+        intent.putExtra("finalName", finalName);
+        startActivity(intent);
         //PhysicalWellness.chkPhysical5.setVisibility(View.VISIBLE);
         //textbox5PW.setVisibility(View.VISIBLE);
         //checkbox5PW.setText("Some text");
