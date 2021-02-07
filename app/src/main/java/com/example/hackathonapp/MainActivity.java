@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressBar personalLevel;
     private int prgPersonLevel;
-
+    private int displayLevel = 1;
 
     private static int prgProductivity;
     private static int prgMentalWellness;
@@ -119,9 +119,7 @@ public class MainActivity extends AppCompatActivity {
         };*/
 
 
-
         txtUserName = findViewById(R.id.txtUserName);
-
 
         btnProductivity = (Button) findViewById(R.id.btnProductivity);
 
@@ -209,7 +207,13 @@ public class MainActivity extends AppCompatActivity {
         personalLevel = (ProgressBar) findViewById(R.id.personLevel);
         prgPersonLevel = (prgPhysicalWellness + prgMentalWellness + prgProductivity) / 3;
         personalLevel.setProgress(prgPersonLevel);
-
+        if (prgPersonLevel >= 100){
+            displayLevel++;
+            prgPersonLevel = prgPersonLevel - 100;
+            personalLevel.setProgress(prgPersonLevel);
+        }
+        TextView currentLevel = (TextView) findViewById(R.id.txtLevelDisplay);
+        currentLevel.setText(Integer.toString(displayLevel));
 
 
     }
@@ -229,6 +233,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MentalWellness.class);
         startActivity(intent);
     }
+
+
 
 
 }   //FirebaseDatabase.getInstance().getReference().child("ProgrammingKnowledge").child("Android").setValue("abcd");

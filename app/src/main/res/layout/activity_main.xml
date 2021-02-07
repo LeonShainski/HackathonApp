@@ -260,7 +260,6 @@
         android:id="@+id/txtLevelDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1"
         android:textColor="#4CAF50"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/personLevel"
