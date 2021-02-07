@@ -2,6 +2,7 @@ package com.example.hackathonapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar personalLevel;
     private int prgPersonLevel;
 
+
     private static int prgProductivity;
     private static int prgMentalWellness;
     private static int prgPhysicalWellness;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText name;
     private Button add;
 
+
     //Button btnSignup;
 
 
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     //private FirebaseAuth mAuth;
     // [END declare_auth]
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,14 +75,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openProductivity();
-            }
-        });
-
-        btnEnterTesting = findViewById(R.id.btnEnterTesting);
-        btnEnterTesting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, TestingActivity.class));
             }
         });
 
@@ -98,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 openMentalWellness();
             }
         });
+
 
         //FirebaseDatabase database = FirebaseDatabase.getInstance();
         //DatabaseReference myRef = database.getReference("User");
@@ -122,7 +119,6 @@ public class MainActivity extends AppCompatActivity {
         FirebaseDatabase.getInstance().getReference().child("userInfo").child("MultipleValues").updateChildren(map);*/
 
 
-
         productivityProgress = (ProgressBar) findViewById(R.id.prgProductivityProgress);
         Intent mIntent = getIntent();
         prgProductivity = mIntent.getIntExtra("productivityPercent", prgProductivity);
@@ -138,9 +134,12 @@ public class MainActivity extends AppCompatActivity {
         prgMentalWellness = mIntent2.getIntExtra("mentalWellnessPercent", prgMentalWellness);
         mentalProgress.setProgress(prgMentalWellness);
 
-        personalLevel = (ProgressBar)findViewById(R.id.personLevel);
-        prgPersonLevel = ( prgPhysicalWellness + prgMentalWellness + prgProductivity ) / 3;
+        personalLevel = (ProgressBar) findViewById(R.id.personLevel);
+        prgPersonLevel = (prgPhysicalWellness + prgMentalWellness + prgProductivity) / 3;
         personalLevel.setProgress(prgPersonLevel);
+
+
+
     }
 
     public void openProductivity() {
@@ -160,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //FirebaseDatabase.getInstance().getReference().child("ProgrammingKnowledge").child("Android").setValue("abcd");
+}   //FirebaseDatabase.getInstance().getReference().child("ProgrammingKnowledge").child("Android").setValue("abcd");
 
 
-}

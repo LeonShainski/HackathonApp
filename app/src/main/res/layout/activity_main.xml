@@ -158,17 +158,7 @@
         app:layout_constraintTop_toTopOf="@+id/btnMentalWellness" />
 
 
-    <Button
-        android:id="@+id/btnEnterTesting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:text="Testing"
-        app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progress_bar"
-        app:layout_constraintVertical_bias="0.0" />
+
 
 
     <ProgressBar
@@ -210,6 +200,74 @@
         app:layout_constraintBottom_toBottomOf="@+id/btnMentalWellness"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/btnMentalWellness" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Progress"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/prgPhysicalProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPhysicalWellness"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Progress"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/prgProductivityProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProductivityTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Progress"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/prgMentalProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMentalWellness" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="Level"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/personLevel"
+        app:layout_constraintEnd_toEndOf="@+id/personLevel"
+        app:layout_constraintStart_toStartOf="@+id/personLevel"
+        app:layout_constraintTop_toTopOf="@+id/personLevel" />
+
+    <TextView
+        android:id="@+id/txtLevelDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#4CAF50"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@+id/personLevel"
+        app:layout_constraintEnd_toEndOf="@+id/personLevel"
+        app:layout_constraintStart_toStartOf="@+id/personLevel"
+        app:layout_constraintTop_toTopOf="@+id/personLevel" />
 
 
     <!--<EditText
