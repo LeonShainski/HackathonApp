@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTasks">
+    tools:context=".AddTasks"
+    android:background="@drawable/shooting_star">
 
     <TextView
         android:id="@+id/txtTitleAddTasks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Tasks"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="40dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,19 +36,22 @@
             android:id="@+id/radioCategory1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Physical Wellbeing" />
+            android:text="Physical Wellbeing"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/radioCategory2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mental Wellbeing" />
+            android:text="Mental Wellbeing"
+            android:textColor="#FFFFFF" />
 
         <RadioButton
             android:id="@+id/radioCategory3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Productivity" />
+            android:text="Productivity"
+            android:textColor="#FFFFFF" />
 
     </RadioGroup>
 
@@ -68,6 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:text="What category does it apply to?"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,6 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Add the name of your task below:"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitleAddTasks" />
@@ -89,6 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
+        app:backgroundTint="#2596BE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

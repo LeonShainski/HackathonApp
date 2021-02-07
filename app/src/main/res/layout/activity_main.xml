@@ -5,7 +5,7 @@
     android:id="@+id/txtActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_background"
+    android:background="@drawable/shooting_star"
     tools:context=".MainActivity">
 
 
@@ -271,6 +271,7 @@
         android:layout_height="37dp"
         android:layout_marginBottom="36dp"
         android:text="Add Task"
+        app:backgroundTint="#2596BE"
         app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -282,6 +283,7 @@
         android:layout_height="37dp"
         android:layout_marginBottom="4dp"
         android:text="New Task"
+        app:backgroundTint="#2596BE"
         app:layout_constraintBottom_toTopOf="@+id/btnProductivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
